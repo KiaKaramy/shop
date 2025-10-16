@@ -35,9 +35,11 @@ export default function LoginRegisterBoxParent() {
 
 
       <div className={` `}>
+        {/* setLogin_or_register={setLogin_or_register} */}
 
       {
-        Login_or_register === 'Login' ? <Login setLogin_or_register={setLogin_or_register} /> : <Register setLogin_or_register={setLogin_or_register} /> 
+        Login_or_register === 'Login' ? <Login  /> : <Register setLogin_or_register={setLogin_or_register} /> 
+        // Login_or_register === 'Login' ? <Login setLogin_or_register={setLogin_or_register} /> : <Register setLogin_or_register={setLogin_or_register} /> 
       }
       
       </div>
