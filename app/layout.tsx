@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+// import { Lalezar , Baloo_Bhaijaan_2 } from "next/font/google";
+import { Vazirmatn } from "next/font/google";
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +13,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const vazirmatn = Vazirmatn({
+  variable: "--font-vazirmatn",
+  subsets: ["arabic"], // for Persian characters
+  weight: ["400", "500", "700"], // choose your weights
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vazirmatn.variable} antialiased`}
       >
         {children}
       </body>
