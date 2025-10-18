@@ -13,7 +13,7 @@ const registerSchema = z
   .object({
     fullname:z.string().min(2 , "نام و نام خانوادگی باید بیشتر از ۲ کاراکتر باشد "),
     // username:z.string().min(2 , "نام کاربری شما باید بیشتر از ۲ کاراکتر باشد"),
-    email:z.string().email("شما باید ایمیل خود را وارد نمایید "),
+    email:z.string().email("  "),
     password:z.string().min(6 , "پسورد شما حداقل باید بیشتر از ۶ کاراکتر باشد "),
     confirmPassword:z.string()
   })

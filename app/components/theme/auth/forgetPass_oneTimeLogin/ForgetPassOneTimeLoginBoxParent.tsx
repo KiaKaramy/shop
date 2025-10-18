@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import Login from './Login'
-import Register from './Register'
+import Login from './ForgetPass'
+import Register from './OneTimeLogin'
 
 type AuthTab = "Login" | "Register"
 
@@ -38,7 +38,7 @@ export default function LoginRegisterBoxParent() {
         {/* setLogin_or_register={setLogin_or_register} */}
 
       {
-        Login_or_register === 'Login' ? <Login  /> : <Register setLogin_or_register={setLogin_or_register} /> 
+        Login_or_register === 'Login' ? <Login setLogin_or_register={setLogin_or_register}  /> : <Register setLogin_or_register={setLogin_or_register} /> 
         // Login_or_register === 'Login' ? <Login setLogin_or_register={setLogin_or_register} /> : <Register setLogin_or_register={setLogin_or_register} /> 
       }
       
